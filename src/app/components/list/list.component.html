@@ -1,0 +1,4 @@
+<app-navbar></app-navbar>
+<div *ngFor="let code of codes | async ; trackBy:trackByFn">
+  <app-element [code]="code"></app-element>
+</div>

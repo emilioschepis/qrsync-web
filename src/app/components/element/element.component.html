@@ -1,0 +1,33 @@
+<div class="card card-centered mb-3 shadow-sm">
+  <ngb-tabset>
+    <ngb-tab>
+      <ng-template ngbTabTitle id="title">
+        <mat-icon class="inner">{{getIcon()}}</mat-icon>Info
+      </ng-template>
+      <ng-template ngbTabContent>
+        <div class="card-body">
+          <h5 *ngIf="code.title" class="card-title">{{code.title}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted inner">
+            {{ code.timestamp.toDate() | date:'short' }}
+          </h6>
+          <p class="card-text">{{ code.content }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <app-element-actions [code]="code"></app-element-actions>
+          </li>
+        </ul>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="code.type === 'CALENDAR'" title="Event">
+      <ng-template ngbTabContent>
+        <app-element-calendar [event]="code.extra"></app-element-calendar>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="code.type === 'CONTACT'" title="Contact">
+      <ng-template ngbTabContent>
+        <app-element-contact [event]="code.extra"></app-element-contact>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>

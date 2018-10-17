@@ -1,0 +1,7 @@
+<ul class="list-group list-group-flush">
+  <li *ngIf="summary" class="list-group-item">Summary: {{summary}}</li>
+  <li *ngIf="description" class="list-group-item">Description: {{description}}</li>
+  <li *ngIf="location" class="list-group-item">Location: {{location}}</li>
+  <li *ngIf="startTime" class="list-group-item">Start time: {{startTime | date:'short'}}</li>
+  <li *ngIf="endTime" class="list-group-item">End time: {{endTime | date:'short'}}</li>
+</ul>

@@ -1,0 +1,12 @@
+a.card-link.card-link-destructive {
+    color: red;
+}
+
+@media screen and (max-width:767px) {
+    a.card-link {
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 4px;
+    }
+}

@@ -1,0 +1,11 @@
+<a *ngIf="code.type === 'URL'" href="{{ code.content }}" class="card-link" target="_blank">Open
+    URL</a>
+<a href="javascript:void(0)" *ngIf="code.type === 'TEXT'" class="card-link" (click)="searchGoogle()">Search
+    Google</a>
+<a href="javascript:void(0)" *ngIf="code.type === 'ISBN'" class="card-link" (click)="searchIsbn()">Search
+    ISBN</a>
+<a href="javascript:void(0)" *ngIf="code.type === 'PRODUCT'" class="card-link" (click)="searchProduct()">Search
+    product</a>
+<a href="javascript:void(0)" class="card-link" (click)="editTitle()">Edit title</a>
+<a href="javascript:void(0)" class="card-link" ngxClipboard [cbContent]="code.content">Copy content</a>
+<a href="javascript:void(0)" class="card-link card-link-destructive" (click)="delete()">Delete</a>

@@ -1,0 +1,7 @@
+<ul class="list-group list-group-flush">
+  <li *ngIf="name" class="list-group-item">Name: {{name}}</li>
+  <li *ngIf="addresses.length > 0" class="list-group-item">Address: {{addresses.join('; ')}}</li>
+  <li *ngIf="phones.length > 0" class="list-group-item">Phone: {{phones.join('; ')}}</li>
+  <li *ngIf="emails.length > 0" class="list-group-item">Email: {{emails.join('; ')}}</li>
+  <li *ngIf="company" class="list-group-item">Work: <span *ngIf="title">{{title}} @ </span>{{company}}</li>
+</ul>

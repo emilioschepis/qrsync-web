@@ -1,0 +1,12 @@
+nav.navbar {
+    background-color: #2196f3;
+}
+
+nav.navbar>a {
+    color: white;
+    font-weight: 700;
+}
+
+nav.navbar>a>img {
+    margin-right: 4px;
+}
